@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [User]">
+  <test name="UserAPI">
+    <classes>
+      <class name="com.api.tests.UserAPI"/>
+    </classes>
+  </test> <!-- UserAPI -->
+  <test name="WeatherAPI">
+    <classes>
+      <class name="com.api.tests.ForceaWeatherAPI"/>
+      <class name="com.api.tests.WeatherAPI"/>
+    </classes>
+  </test> <!-- WeatherAPI -->
+  <test name="OtherAPI">
+    <classes>
+      <class name="com.api.tests.TestAuth"/>
+      <class name="com.api.tests.Test123"/>
+    </classes>
+  </test> <!-- OtherAPI -->
+  <test name="UserAPI(failed)">
+    <classes>
+      <class name="com.api.tests.UserAPI">
+        <methods>
+          <include name="setup"/>
+          <include name="failTest"/>
+          <include name="getAllUsers"/>
+          <include name="listSpecificUser"/>
+        </methods>
+      </class> <!-- com.api.tests.UserAPI -->
+    </classes>
+  </test> <!-- UserAPI(failed) -->
+  <test name="WeatherAPI(failed)">
+    <classes>
+      <class name="com.api.tests.ForceaWeatherAPI">
+        <methods>
+          <include name="getAccessToken"/>
+        </methods>
+      </class> <!-- com.api.tests.ForceaWeatherAPI -->
+      <class name="com.api.tests.WeatherAPI">
+        <methods>
+          <include name="getWeather"/>
+        </methods>
+      </class> <!-- com.api.tests.WeatherAPI -->
+      <class name="com.api.tests.UserAPI">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.api.tests.UserAPI -->
+    </classes>
+  </test> <!-- WeatherAPI(failed) -->
+  <test name="OtherAPI(failed)">
+    <classes>
+      <class name="com.api.tests.TestAuth">
+        <methods>
+          <include name="postmantest"/>
+          <include name="postman"/>
+        </methods>
+      </class> <!-- com.api.tests.TestAuth -->
+      <class name="com.api.tests.Test123">
+        <methods>
+          <include name="holiday2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.api.tests.Test123 -->
+      <class name="com.api.tests.UserAPI">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.api.tests.UserAPI -->
+    </classes>
+  </test> <!-- OtherAPI(failed) -->
+</suite> <!-- Failed suite [User] -->

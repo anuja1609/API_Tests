@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="User">
+  <test name="UserAPI">
+    <classes>
+        <class name="com.api.tests.UserAPI"/>  
+    </classes>
+  </test>
+  <test name="WeatherAPI">
+    <classes> 
+       	<class name="com.api.tests.ForceaWeatherAPI"/> 
+ 		<class name="com.api.tests.WeatherAPI"/>
+    </classes>
+  </test>
+  <test name="OtherAPI">
+    <classes> 
+      	<class name="com.api.tests.TestAuth"/>  
+  		<class name="com.api.tests.Test123"/>
+    </classes>
+  </test>
+  
+</suite>
+
+
